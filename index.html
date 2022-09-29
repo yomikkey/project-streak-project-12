@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Hire-Devs</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,28 +14,307 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <!-- js -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- js ends -->
   <!-- Place favicon.ico in the root directory -->
-
+  <!-- css -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="css/mobile.css">
+  <!-- css ends -->
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+  <!-- header-starts -->
+  <header>
+    <!-- The Modal - handle Let's Talk -->
+    <div id="letsTalkModal" class="modal">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Where to send you spams? <br> hehe!</h2>
+        </div>
+        <div class="modal-body">
+          <input type="text">
+        </div>
+        <div class="modal-footer">
+          <h4 onclick="handleCloseModal('letsTalkModal')">Close</h4>
+          <h4 onclick="handleCloseModal('letsTalkModal')">Submit</h4>
+        </div>
+      </div>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+    </div>
+    <!-- navbar-starts -->
+    <nav>
+      <logo>
+        <img src="img/logo_white.png" alt="">
+      </logo>
+
+      <!-- mobile html -->
+      <!-- hambergur menu -->
+      <div class="hamburger-menu">
+        <img src="img/menu_32px.png" alt="" onClick="toggleHamburgerMenu('menu-content')">
+        <div id="menu-content" class="menu-content">
+          <a href="" class="menu-link">Home</a>
+          <a href="" class="menu-link">Blog</a>
+          <a href="" class="menu-link">Pages</a>
+          <a href="" class="menu-link">About</a>
+          <a href="" class="menu-link">Agent</a>
+          <a href="" class="menu-link">Subscribe</a>
+        </div>
+      </div>
+      <!-- hamergur menu ends -->
+      <!-- mobile html ends -->
+
+      <div class="nav-btn" onclick="handleLetsTalkBtn('letsTalkModal')">Let's Talk</div>
+    </nav>
+    <!-- navbar-ends -->
+    <!-- intro-starts -->
+    <div class="intro">
+      <div class="intro-image-container">
+        <img src="img/empowering_img.png" alt="">
+      </div>
+      <div class="intro-text-container">
+        <h1>Empowering your business with the <br> best solution</h1>
+        <span>
+          We connect your bran & business with your target <br>
+          market in the most desirable, refined, and elvated way <br>
+          possible through the digital medium
+        </span>
+        <div class="input-email">
+          <img src="img/email.png" alt="">
+          <input type="text" placeholder="Enter your email address">
+          <div class="btn btn-mod" onclick="">Let's talk</div>
+        </div>
+      </div>
+    </div>
+    <!-- intro-ends -->
+  </header>
+  <main>
+    <!-- section-1-starts -->
+    <div class="section-1">
+      <div class="section-1-stats-container">
+        <div class="section-1-main-text">
+          <h1>We Connect your buisness <br> with your target</h1>
+        </div>
+        <div class="section-1-stats">
+          <div class="stat">
+            <h1>1,093</h1>
+            <span>Finished Project</span>
+          </div>
+          <div class="stat">
+            <h1>3,355</h1>
+            <span>Enrolled Project</span>
+          </div>
+          <div class="stat">
+            <h1>40</h1>
+            <span>Team Worker</span>
+          </div>
+          <div class="stat">
+            <h1>90%</h1>
+            <span>Satisfaction Rate</span>
+          </div>
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="section-1-image-container">
+        <img src="img/group_vid_image.png" height="525vh" alt="">
+      </div>
+    </div>
+    <!-- section-1-ends -->
+    <!-- section-2-starts -->
+    <div class="section-2">
+      <div class="section-2-headline-container">
+        We have made your care easy for you
+      </div>
+      <!-- seprator -->
+      <div class="section-2-container">
+        <div class="section-2-text-container">
+          <h2>Effective Website Design and Development</h2>
+          <span>
+            By connecting patients all over the world to the best
+            instructors, Healthycare helping individuals reach their
+            goals and pursue their dreams.
+          </span>
+          <div class="btn" onclick="handleLetsTalkBtn('letsTalkModal')">
+            Let's Talk
+          </div>
+        </div>
+        <div class="section-2-image-container">
+          <img src="img/effective-web-design-img.png" alt="">
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="section-2-container reverse">
+        <div class="section-2-text-container">
+          <h2>
+            We Give Proven Digital Marketing Stategies for
+            Our Clients
+          </h2>
+          <span>
+            Consultant working hard and we collaborate with organizations
+            that are keen transform the legal industry, reach their goals
+            and pursue their dreams.
+          </span>
+          <div class="btn" onclick="handleLetsTalkBtn('letsTalkModal')">
+            Let's Talk
+          </div>
+        </div>
+        <div class="section-2-image-container-reverse">
+          <img src="img/proven-market-statergies-img.png" alt="">
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="section-2-container">
+        <div class="section-2-text-container">
+          <h2>
+            People Will Always Judge the book by it's cover.
+          </h2>
+          <span>
+            By connecting patients all over the world to the best
+            instructors, Healthycare helping individuals reach their
+            goals and pursue their dreams.
+          </span>
+          <div class="btn mt5" onclick="handleLetsTalkBtn('letsTalkModal')">
+            Let's Talk
+          </div>
+        </div>
+        <div class="section-2-image-container">
+          <img src="img/judge-cover-img.png" alt="">
+        </div>
+      </div>
+
+    </div>
+    <!-- section-2-ends -->
+    <!-- section-3-starts[meet developers] -->
+    <div class="meet-devs-section">
+      <div class="meet-devs-heading-container">
+        <h2>
+          Meet our Great <br>
+          Creative Teams
+          </h3>
+          <span>
+            Our journey began with a simple idea make a simple journey
+            make this world more function. We collaborate with organizations
+            that are keen transform
+          </span>
+      </div>
+      <!-- seprator -->
+      <div class="meet-devs-main-container">
+        <div class="dev-profile">
+          <div class="dev-profile-image-container">
+            <img src="img/team-member-Amera-img.png" alt="">
+          </div>
+          <div class="dev-profile-about-info">
+            <div class="name">Amera Amanda</div>
+            <div class="about">
+              Introduction start procarasninate 2 hours get
+              to do work to do work while eating
+            </div>
+          </div>
+        </div>
+        <!-- seprator -->
+        <div class="dev-profile">
+          <div class="dev-profile-image-container">
+            <img src="img/team-member-lucas-img.png" alt="">
+          </div>
+          <div class="dev-profile-about-info">
+            <div class="name">Lucas Podolski</div>
+            <div class="about">
+              Introduction start procarasninate 2 hours get
+              to do work to do work while eating
+            </div>
+          </div>
+        </div>
+        <!-- seprator -->
+        <div class="dev-profile">
+          <div class="dev-profile-image-container">
+            <img src="img/team-member-leny-img.png" alt="">
+          </div>
+          <div class="dev-profile-about-info">
+            <div class="name">Leny Marissa Nasution</div>
+            <div class="about">
+              Introduction start procarasninate 2 hours get
+              to do work to do work while eating
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="see-more-btn btn">See More</div>
+    </div>
+    <!-- section-3-ends -->
+  </main>
+  <!-- footer-section-starts -->
+  <footer>
+    <div class="footer-logo">
+      <img src="img/logo_white.png" alt="">
+      <div class="socials">
+        <div><img src="/img/instagram.png" alt=""></div>
+        <div><img src="/img/facebook.png" alt=""></div>
+        <div><img src="/img/twitter.png" alt=""></div>
+        <div><img src="/img/github.png" alt=""></div>
+      </div>
+    </div>
+    <!-- seprator -->
+    <div class="footer-seprator"> </div>
+    <!-- seprator -->
+    <div class="footer-links">
+      <div class="footer-link">
+        <h3>Our Products</h3>
+        <div class="footer-link-content">
+          <span>The Support Suite</span>
+          <span>The Sales Suite</span>
+          <span>Support</span>
+          <span>Guide</span>
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="footer-link">
+        <h3>Top Features</h3>
+        <div class="footer-link-content">
+          <span>Ticketing System</span>
+          <span>Knowledge Base</span>
+          <span>Community Forums</span>
+          <span>Help Desk Software</span>
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="footer-link">
+        <h3>Resources</h3>
+        <div class="footer-link-content">
+          <span>Product Support</span>
+          <span>Request Demo</span>
+          <span>Library</span>
+          <span>Business Blog</span>
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="footer-link">
+        <h3>Company</h3>
+        <div class="footer-link-content">
+          <span>About Us</span>
+          <span>Press</span>
+          <span>Investors</span>
+          <span>Events</span>
+        </div>
+      </div>
+      <!-- seprator -->
+      <div class="footer-link">
+        <h3>Favourite Things</h3>
+        <div class="footer-link-content">
+          <span>For Enterprise</span>
+          <span>For Startups</span>
+          <span>For Benchmark</span>
+          <span>For Small Business</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer-section-ends -->
 </body>
 
 </html>
